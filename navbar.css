@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
 #icon {
     display: flex;
     /* border: 1px solid; */
-    width: 400px;
+    /* width: 400px;
     height: 70px;
     margin-left: 700px;
     gap: 70px;
@@ -32,7 +32,7 @@ body {
     align-items: center;
     
 
-}
+} */
 #icon>div>p{
     font-size: larger;
 }
@@ -88,4 +88,66 @@ body {
 #new>p>a{
     color: #2f3337;
     text-decoration: none;
+} */
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* The top container holding logo and right-side links */
+#main {
+    border-bottom: 1px solid rgb(199, 196, 196);
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, icons to right automatically */
+    align-items: center;
+    padding: 10px 40px;
+    height: 70px;
+}
+
+/* Simple sizing for your logo image */
+#main img {
+    width: 170px;
+    height: 30px;
+}
+
+/* Right-side container for Login, Payment, Cart */
+#icon {
+    display: flex;
+    gap: 30px; /* Puts a clean, uniform gap between your items */
+}
+
+/* Styling for the text links inside the top section */
+#icon a {
+    color: #2f3337;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#icon a:hover {
+    color: #00afef; /* Changes color to blue when mouse hovers over it */
+}
+
+/* The bottom row holding your categories */
+#new {
+    display: flex;
+    gap: 40px;
+    padding: 15px 40px;
+    border-bottom: 1px solid rgb(199, 196, 196);
+    background-color: #f8f8f8; /* Light gray background to separate it */
+}
+
+/* Styling for category links */
+#new a {
+    color: #2f3337;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#new a:hover {
+    color: #00afef;
 }
