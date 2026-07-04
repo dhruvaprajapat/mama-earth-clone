@@ -198,3 +198,15 @@ body {
   #head{
       margin: 29px;
   }
+  .logo h2{
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+    font-family:'Poppins',sans-serif;
+    color:#2563eb;
+    cursor:pointer;
+}
+
+.logo span{
+    color:#22c55e;
+}

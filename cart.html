@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .conatiner{
-            display: grid;
-            gap: 23px;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: auto;
-            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-            justify-content: left;
-            align-items: left ;
-            width:80%;
-            margin:auto;
-            
-           
-        }
-        #box{
-            width: 100%;
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;             
-           
-        }
-        .conatiner>div>img {
-            text-align: center;
-            width: 50%;
-            display: block;
-            margin: auto;
-        }
+      .conatiner{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+       #box{
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+#box:hover{
+    transform:translateY(-5px);
+}
+       .conatiner>div>img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+}
         #box>p {
             display: block;
             text-align: center;
@@ -64,32 +66,41 @@
 
         }
         .del{
-            width: 40%;
-            height: 40px;
-            font-size: 20px;
-            color: rgb(6, 6, 6);
-            background-color: rgb(158, 156, 156);
-            border-radius: 2px;
-            margin-left: 140px;
-            position: relative;
-            bottom: -30px;
-            border: 0px;
-          
-           
-        }
+    width:100%;
+    height:45px;
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.del:hover{
+    background:#dc2626;
+}
         .stotal{
-            display: block;
-            margin: auto;
-            text-align: center;
-        }
+    width:320px;
+    height:45px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    padding:0 15px;
+    margin:20px auto;
+}
         .Sub{
-            width: 6%;
-            display: block;
-            margin: auto;
-            text-align: center;
-            color: aliceblue;
-            font-size: 24px;
-        }
+    width:320px;
+    height:45px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.Sub:hover{
+    background:#1d4ed8;
+}
         body {
     font-family: sans-serif;
 }
@@ -185,13 +196,11 @@
     color: #2f3337;
     text-decoration: none;
 }
-
 .linesubmit{
-    color: #0d2128;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 7px;
-    
+    text-align:center;
+    color:#2563eb;
+    font-size:28px;
+    margin:30px 0;
 }
 .Sub{
     width: 90px;
@@ -199,8 +208,22 @@
     border: 2px solid rgb(215, 187, 187);
 
 }
-.inc{
-    margin-right: 40px;
+.inc,
+.dec{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    margin:10px 8px;
+}
+
+.inc:hover,
+.dec:hover{
+    background:#1d4ed8;
 }
 .valuecount{
     display: block;
@@ -211,31 +234,31 @@
     left: 34px;
     
 }
+.checkoutBtn{
+    display:block;
+    width:320px;
+    height:50px;
+    margin:20px auto 40px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.checkoutBtn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
 
     </style>
 </head>
 <body>
     <body>
-        <div id="main">
-            <img src="https://mamaearthp.imgix.net/wysiwyg/mamaearth-logo.png?auto=format&fit=scale" alt="">
-            <div id="icon">
-                    <div id="new">
-        
-                        <p class="acc"><a href="login.html">Login</a></p>
-                    </div>
-                    <div id="new1">
-                        <p class="acc"><a href="payment.html">Payment</a></p>
-                    </div>
-            </div>
-        </div>
-        <div id="new">
-            <p><a href="index.html">Home</a></p>
-            <p><a href="babypro.html">Baby products</a></p>
-            <p><a href="beauty1.html">Beauty products</a></p>
-    
-    
-    
-        </div>
+     
     <div class="conatiner"> 
     </div>
 </body>
@@ -262,8 +285,8 @@ function totalsum(cartArr){
      promocode.setAttribute("class","stotal")
      promocode.setAttribute("type","text")
      
-     prosubmit = document.createElement("submit")
-     prosubmit.innerText="submit"
+     prosubmit = document.createElement("button")
+     prosubmit.innerText="Apply"
      prosubmit.setAttribute("class","Sub")
      prosubmit.style.backgroundColor = "#00afef"
      prosubmit.addEventListener("click",checkpro)
@@ -351,8 +374,27 @@ function display(cartArr){
    
    
   }
-  document.querySelector("body").append(promocode,prosubmit)
-  
+ var checkoutBtn = document.createElement("button");
+
+checkoutBtn.innerText = "Proceed to Checkout";
+
+checkoutBtn.setAttribute("class","checkoutBtn");
+
+checkoutBtn.addEventListener("click",function(){
+
+    if(cartArr.length===0){
+        alert("Your cart is empty!");
+        return;
+    }
+
+    window.location.href="payment.html";
+});
+
+document.querySelector("body").append(
+    promocode,
+    prosubmit,
+    checkoutBtn
+);
   function Del(ele,index){
   cartArr.splice(index,1)
     localStorage.setItem("cartdata",JSON.stringify(cartArr))

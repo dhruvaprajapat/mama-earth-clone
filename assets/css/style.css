@@ -1,0 +1,47 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+    color:#1f2937;
+    line-height:1.5;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+input{
+    outline:none;
+}
+.section{
+    width:90%;
+    margin:80px auto;
+}
+body{
+    overflow-x:hidden;
+}

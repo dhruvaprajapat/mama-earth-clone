@@ -6,43 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-           #box{
-               width: 33%;
-               height: 630px;
-               /* border: 1px solid black; */
-               text-align: center;
-               margin: auto;
-               margin-top: 20px;
-               box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-           }
-           #box>h3{
-               color: rgb(1, 174, 139);
-               font-family: cursive;
-              font-size: 25px;
-           }
-           input{
-               display: flex;
-               height: 40px;
-              margin: auto;
-              width: 80%;
-              margin-bottom: 40px;
-           }
+        body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#ffffff);
+}
+          #box{
+    width:33%;
+    min-width:380px;
+    background:#fff;
+    text-align:center;
+    margin:25px auto;
+    padding:20px 0;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+          #box>h3{
+    color:#2563eb;
+    font-size:28px;
+    font-family:'Poppins',sans-serif;
+}
+          input{
+    display:block;
+    width:85%;
+    height:45px;
+    margin:0 auto 20px;
+    padding:0 15px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    box-sizing:border-box;
+}
            select{
-          
-            display: flex;
-               height: 40px;
-              margin: auto;
-              width: 80%;
-              margin-bottom: 40px;
-           }
-           #submit{
-              display: block;
-              margin: auto;
-              font-size: 20px;
-              background-color: rgb(1, 174, 139);
-              color: aliceblue;
-              border: 0px;
-           }
+    display:block;
+    width:85%;
+    height:45px;
+    margin:0 auto 20px;
+    padding:0 15px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+}
+          #submit{
+    width:85%;
+    height:45px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+}
     </style>
 </head>
 <body>
@@ -66,4 +78,4 @@
     </div>
 </body>
 </html>
-<script src="signup.js"></script>
+<script src="assets/js/signup.js"></script>

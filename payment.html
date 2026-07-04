@@ -6,23 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="payment.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="assets/css/payment.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
 
 
 </head>
-<div id="new">
-    <p><a href="index.html">Home</a></p>
-    <p><a href="babypro.html">Baby products</a></p>
-    <p><a href="beauty1.html">Beauty products</a></p>
+<header class="navbar">
+
+       <div class="logo">
+    <h2>Mama<span>Mars</span></h2>
 </div>
+    
+
+   
+</header>
 
 <body>
     <div id="LS">
         <h5>
             Login to see your existing offers
         </h5>
-        <button class="log">login/signup</button>
+        <button class="log">Login/Signup</button>
     </div>
     <div id="head">
         <h3>Delivery Address</h3>
@@ -32,7 +36,11 @@
             <input type="text" id="lname" placeholder="last name*">
         </div>
         <div class="input"> <input type=" text" id="mail" placeholder="Email ID*">
-            <input placeholder="Phone Number*" id="Number" type="Number" />
+            <input
+    type="tel"
+    id="Number"
+    placeholder="Phone Number*"
+    maxlength="10">
         </div>
         <div class="input"><input placeholder="Pin Code*" id="pincode" type="Number" />
             <input placeholder="City*" id="city" type="text" />
@@ -54,7 +62,11 @@
                 <p id="start">Pay Using Credit Card Or Debit Cards</p>
             </div>
             <!-- <img src="https://pbs.twimg.com/media/EiA9DSyVkAA0WGD.jpg:large" class="mama" alt="mama"> -->
-            <div class="input"> <input type=" number" id="cardno" placeholder="Card Number">
+            <div class="input"><input
+    type="text"
+    id="cardno"
+    maxlength="16"
+    placeholder="Card Number">
             </div>
             <div class="input"> <input type="month" id="dc1" placeholder="MM/YY">
                 <input type="number" id="cvv" placeholder="CVV">
@@ -72,6 +84,6 @@
 </body>
 
 </html>
-<script src="payment.js">
+<script src="assets/js/payment.js">
 
 </script>
